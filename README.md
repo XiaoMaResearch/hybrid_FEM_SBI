@@ -12,7 +12,7 @@ Hybrid Method with coupling of Spectral Boundary Integral Method and Finite Elem
 
 ## License:
 
-UIUC & Cornell License
+MIT License
 
 Copyright (c) 2017 Xiao Ma <xiaoma5@illinois.edu> 
                    Ahmed Elbanna <elbanna2@illinois.edu> 
