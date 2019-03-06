@@ -1,0 +1,41 @@
+include_directories(${hybrid_fem_bie_SOURCE_DIR}/src)
+
+# Multi faults system (Trying to get it general)
+
+
+
+#add_executable(parallel_fault_run parallel_fault_run.cc)
+#target_link_libraries(parallel_fault_run hybrid_fem_bie)
+
+#add_executable(parallel_fault_run_reg parallel_fault_run_reg.cc)
+#target_link_libraries(parallel_fault_run_reg hybrid_fem_bie)
+
+
+add_executable(parallel_fault_run_reg_3_125m parallel_fault_run_reg_3_125m.cc)
+target_link_libraries(parallel_fault_run_reg_3_125m hybrid_fem_bie)
+#
+add_executable(parallel_fault_run_reg_3_125m_homo parallel_fault_run_reg_3_125m_homo.cc)
+target_link_libraries(parallel_fault_run_reg_3_125m_homo hybrid_fem_bie)
+#
+add_executable(parallel_fault_run_reg_3_125m_R05 parallel_fault_run_reg_3_125m_R05.cc)
+target_link_libraries(parallel_fault_run_reg_3_125m_R05 hybrid_fem_bie)
+#
+add_executable(parallel_fault_run_reg_3_125m_multi parallel_fault_run_reg_3_125m_multi.cc)
+target_link_libraries(parallel_fault_run_reg_3_125m_multi hybrid_fem_bie)
+#
+add_executable(parallel_fault_run_reg_6_25m parallel_fault_run_reg_6_25m.cc)
+target_link_libraries(parallel_fault_run_reg_6_25m hybrid_fem_bie)
+
+add_executable(parallel_fault_run_reg_12_5m parallel_fault_run_reg_12_5m.cc)
+target_link_libraries(parallel_fault_run_reg_12_5m hybrid_fem_bie)
+
+
+add_executable(parallel_fault_run_reg_plastic parallel_fault_run_reg_plastic.cc)
+target_link_libraries(parallel_fault_run_reg_plastic hybrid_fem_bie)
+
+
+#add_executable(bimaterial bimaterial.cc)
+#target_link_libraries(bimaterial hybrid_fem_bie)
+
+#add_executable(bimaterial_reg bimaterial_reg.cc)
+#target_link_libraries(bimaterial_reg hybrid_fem_bie)

@@ -1,0 +1,3 @@
+include_directories(${hybrid_fem_bie_SOURCE_DIR}/src)
+add_executable(wedge_slip_weak wedge_slip_weak.cc)
+target_link_libraries(wedge_slip_weak hybrid_fem_bie)

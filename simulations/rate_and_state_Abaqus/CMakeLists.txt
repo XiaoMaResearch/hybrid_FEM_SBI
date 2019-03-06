@@ -1,0 +1,5 @@
+include_directories(${hybrid_fem_bie_SOURCE_DIR}/src)
+add_executable(rate_and_state_abaqus input_Rate_and_State_Aging_Abaqus.cc)
+target_link_libraries(rate_and_state_abaqus hybrid_fem_bie)
+
+

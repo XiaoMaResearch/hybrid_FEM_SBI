@@ -1,0 +1,72 @@
+set(bie_SRC
+  bie/parameter_reader.cc
+  bie/material.cc
+  bie/nodal_field.cc
+  bie/fftable_nodal_field.cc
+  bie/limited_history.cc
+  bie/kernel.cc
+  bie/precomputed_kernel.cc
+  bie/preint_kernel.cc
+  bie/half_space.cc
+  bie/dumper.cc
+  # use method as infinite boundary condition for FEM
+  bie/infinite_boundary.cc
+  # interfaces
+  bie/interface.cc
+  bie/bimat_interface.cc
+  bie/defrig_interface.cc
+  bie/unimat_interface.cc
+  # interface laws
+  bie/interface_law.cc
+  bie/interface_laws/coulomb_friction_law.cc
+  bie/interface_laws/linear_shear_cohesive_law.cc
+  bie/interface_laws/barras_law.cc
+  # new function BIE for BIE initiation
+  bie/BIE_initiation.cpp
+  )
+set(fem_SRC
+  fem/share_header.cpp
+  fem/Abaqus_read.cpp
+  fem/Abaqus_read_withAB.cpp
+  fem/Meshrectangular.cpp
+  fem/bcdof.cpp
+  fem/bcdof_ptr.cpp
+  fem/BIE_correct.cpp
+  fem/cal_BTDB.cpp
+  fem/mapglobal.cpp
+  fem/maplocal.cpp
+  fem/Meshrectangular.cpp
+  fem/update_mesh_topology.cpp
+  fem/mesh_Generated_multi_faults.cpp
+  fem/mesh_Abaqus_multi_faults.cpp
+  fem/mesh_Abaqus_multi_faults_withAB.cpp
+  fem/cal_ke.cpp
+  fem/cal_T_abc.cpp
+  fem/cal_ab_force.cpp
+  fem/cal_Bmat.cpp
+  fem/cal_fe_global_plastic.cpp
+  fem/cal_fe_global_plastic_vary.cpp
+  fem/cal_fe_int_el.cpp
+  fem/cal_fe_global_const_ke.cpp
+  fem/cal_fe_global_vary_ke.cpp
+  fem/cal_fe_global_const_ke_bimat.cpp
+  fem/Slip_Weakening.cpp
+  fem/Slip_Weakening_lumpM.cpp
+  fem/Slip_Weakening_lumpM_with_buffer.cpp
+  fem/Slip_Weakening_reg.cpp
+  fem/Slip_Weakening_bimat.cpp
+  fem/Slip_Weakening_reg_bimat.cpp
+  fem/Rate_and_State_Aging.cpp
+  fem/NR_solve_eq10.cpp
+  fem/cal_slip_sliprate.cpp
+  fem/cal_slip_sliprate_angle.cpp
+  fem/update_disp_velocity.cpp
+  fem/time_advance.cpp
+  fem/get_disp_from_BIE.cpp
+  fem/cal_M.cpp
+  fem/cal_M_global_vec.cpp
+  fem/Getplastic.cpp
+  fem/Eiglab.h
+)
+add_library(hybrid_fem_bie ${bie_SRC} ${fem_SRC} ${tools_SRC})
+target_link_libraries(hybrid_fem_bie ${FFTW_LIBRARIES} ${GSL_LIBRARIES})

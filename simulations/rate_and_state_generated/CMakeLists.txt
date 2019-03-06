@@ -1,0 +1,7 @@
+include_directories(${hybrid_fem_bie_SOURCE_DIR}/src)
+add_executable(rate_and_state input_Rate_and_State_Aging_Generated.cc)
+target_link_libraries(rate_and_state hybrid_fem_bie)
+
+
+add_executable(rate_and_state_input_new rate_and_state_input_new.cc)
+target_link_libraries(rate_and_state_input_new hybrid_fem_bie)

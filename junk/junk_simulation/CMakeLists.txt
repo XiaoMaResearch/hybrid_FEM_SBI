@@ -1,0 +1,24 @@
+include_directories(${hybrid_fem_bie_SOURCE_DIR}/src)
+
+#add_executable(junk_main junk_main.cc)
+#target_link_libraries(junk_main hybrid_fem_bie)
+
+
+#add_executable(junk_test junk_test.cc)
+#target_link_libraries(junk_test hybrid_fem_bie)
+
+#add_executable(junk_Q4 junk_Q4.cc)
+#target_link_libraries(junk_Q4 hybrid_fem_bie)
+
+#add_executable(junk_hello_world junk_hello_world.cc)
+add_executable(test_abaqusio test_abaqusio.cc)
+target_link_libraries(test_abaqusio hybrid_fem_bie)
+
+add_executable(junk_test_abaqus_run_incline junk_test_abaqus_run_incline.cc)
+target_link_libraries(junk_test_abaqus_run_incline hybrid_fem_bie)
+
+add_executable(junk_test_abaqus_run_incline_multi junk_test_abaqus_run_incline_multi.cc)
+target_link_libraries(junk_test_abaqus_run_incline_multi hybrid_fem_bie)
+#target_link_libraries(junk_hello_world hybrid_fem_bie)
+#add_executable(junk_parallel_faults_run_reg junk_parallel_faults_run_reg.cc)
+#target_link_libraries(junk_parallel_faults_run_reg hybrid_fem_bie)

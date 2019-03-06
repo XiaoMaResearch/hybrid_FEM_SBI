@@ -1,0 +1,1 @@
+/opt/cray/pe/craype/2.5.12/bin/CC   -std=c++0x   CMakeFiles/junk_main.dir/junk_main.cc.o  -o junk_main ../../src/libhybrid_fem_bie.a -lfftw3 /usr/common/software/gsl/2.1/gnu/lib/libgsl.a /usr/common/software/gsl/2.1/gnu/lib/libgslcblas.a 

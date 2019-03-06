@@ -1,0 +1,3 @@
+include_directories(${hybrid_fem_bie_SOURCE_DIR}/src)
+add_executable(wedge_rate_and_state wedge_rate_and_state.cc)
+target_link_libraries(wedge_rate_and_state hybrid_fem_bie)

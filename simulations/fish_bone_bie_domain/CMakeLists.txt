@@ -1,0 +1,4 @@
+include_directories(${hybrid_fem_bie_SOURCE_DIR}/src)
+
+add_executable(fish_bone_bie_domain fish_bone_bie_domain.cc)
+target_link_libraries(fish_bone_bie_domain hybrid_fem_bie)
